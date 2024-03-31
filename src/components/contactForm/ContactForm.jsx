@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 
 const contactSchema = yup.object().shape({
   name: yup
@@ -54,7 +54,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label className={css.label} htmlFor={namberFiledId}>
-            Number{' '}
+            Number
           </label>
           <Field className={css.input} name="number" id={namberFiledId} />
           <ErrorMessage className={css.error} name="number" component="span" />
