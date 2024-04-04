@@ -1,7 +1,8 @@
 import css from './LoginForm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logIn } from '../../redux/auth/operations';
 import * as yup from 'yup';
 
 const validationSchema = yup.object().shape({
@@ -25,11 +26,10 @@ const initialValues = {
 export default function LoginForm() {
   const emailFiledId = useId();
   const passwordFiledId = useId();
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    // dispatch(register(values));
-    console.log(values);
+    dispatch(logIn(values));
     actions.resetForm();
   };
 
