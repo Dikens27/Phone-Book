@@ -8,8 +8,20 @@ export default function Navigation() {
 
   return (
     <nav className={css.container}>
-      <NavLink to="/">Home</NavLink>
-      {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
+      <NavLink
+        className={({ isActive }) => (isActive ? css.active : css.link)}
+        to="/"
+      >
+        Home
+      </NavLink>
+      {isLoggedIn && (
+        <NavLink
+          className={({ isActive }) => (isActive ? css.active : css.link)}
+          to="/contacts"
+        >
+          Contacts
+        </NavLink>
+      )}
     </nav>
   );
 }

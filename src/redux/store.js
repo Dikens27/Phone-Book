@@ -17,7 +17,7 @@ import authReduser from './auth/slise';
 const authPersistConfig = {
   key: 'authSlise',
   storage,
-  whiteList: ['token'],
+  whitelist: ['token'],
 };
 
 const authPersistReduser = persistReducer(authPersistConfig, authReduser);

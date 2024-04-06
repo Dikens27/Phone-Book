@@ -2,3 +2,25 @@
   display: flex;
   gap: 10px;
 }
+
+.link {
+  color: #fff;
+  font-size: var(--font-medium);
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  transition-property: color, background-color, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--animation-cubicBezier);
+
+  transform: scale(0.9);
+}
+
+.active {
+  color: red;
+  background-color: var(--color-accent);
+
+  transform: scale(1);
+  pointer-events: none;
+}

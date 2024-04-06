@@ -1,7 +1,7 @@
 import Layout from '../layout/Layout';
 import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-// import Loader from '../loader/Loader';
+import Loader from '../loader/Loader';
 import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from '../../redux/auth/operations';
 import RestrictedRoute from '../restrictedRoute/RestrictedRoute';
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <Layout>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route
