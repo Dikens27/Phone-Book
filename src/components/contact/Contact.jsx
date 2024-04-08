@@ -4,8 +4,12 @@ import { FaUser } from 'react-icons/fa6';
 import { deleteContact } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
+import ContactEditor from '../contactEditor/ContactEditor';
+import { AiFillDelete } from 'react-icons/ai';
 
 export default function Contact({ contacts: { id, name, number } }) {
+  const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -23,17 +27,21 @@ export default function Contact({ contacts: { id, name, number } }) {
     <>
       <div className={css.container}>
         <div className={css.miniContainer}>
-          <p className={css.text}>
+          <div className={css.iconText}>
             <FaUser />
-            {name}
-          </p>
-          <p className={css.text}>
+            {isEditing ? (
+              <ContactEditor initialValue={name} contactId={id} />
+            ) : (
+              <p onClick={() => setIsEditing(true)}>{name}</p>
+            )}
+          </div>
+          <div className={css.iconText}>
             <FaPhoneAlt />
-            {number}
-          </p>
+            <p>{number}</p>
+          </div>
         </div>
         <button className={css.button} onClick={handleClick}>
-          Delete
+          <AiFillDelete className={css.icon} />
         </button>
       </div>
       <Toaster />
