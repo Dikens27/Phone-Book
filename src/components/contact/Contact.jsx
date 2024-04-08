@@ -34,6 +34,7 @@ export default function Contact({ contacts: { id, name, number } }) {
                 initialValueName={name}
                 initialValueNumber={number}
                 contactId={id}
+                onClose={() => setIsEditing(false)}
               />
             ) : (
               <div onClick={() => setIsEditing(true)}>

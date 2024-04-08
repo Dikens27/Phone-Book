@@ -8,6 +8,7 @@ export default function ContactEditor({
   contactId,
   initialValueName,
   initialValueNumber,
+  onClose,
 }) {
   const [name, setName] = useState(initialValueName);
   const [number, setNumber] = useState(initialValueNumber);
@@ -16,13 +17,20 @@ export default function ContactEditor({
 
   const handleSubmit = e => {
     e.preventDefault();
+
     dispatch(
-      updateContact({
-        id: contactId,
-        name: name,
-        number: number,
-      })
-    );
+      updateContact([
+        {
+          name: name,
+          number: number,
+        },
+        {
+          id: contactId,
+        },
+      ])
+    )
+      .unwrap()
+      .then(() => onClose());
   };
 
   return (
