@@ -5,7 +5,7 @@ import { updateContact } from '../../redux/contacts/operations';
 import { FcCheckmark } from 'react-icons/fc';
 
 export default function ContactEditor({
-  // contactId,
+  contactId,
   initialValueName,
   initialValueNumber,
 }) {
@@ -18,7 +18,7 @@ export default function ContactEditor({
     e.preventDefault();
     dispatch(
       updateContact({
-        // id: contactId,
+        id: contactId,
         name: name,
         number: number,
       })
