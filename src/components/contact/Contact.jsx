@@ -30,14 +30,20 @@ export default function Contact({ contacts: { id, name, number } }) {
           <div className={css.iconText}>
             <FaUser />
             {isEditing ? (
-              <ContactEditor initialValue={name} contactId={id} />
+              <ContactEditor
+                initialValueName={name}
+                initialValueNumber={number}
+                contactId={id}
+              />
             ) : (
-              <p onClick={() => setIsEditing(true)}>{name}</p>
+              <div onClick={() => setIsEditing(true)}>
+                <p>{name}</p>
+                <p>{number}</p>
+              </div>
             )}
           </div>
           <div className={css.iconText}>
             <FaPhoneAlt />
-            <p>{number}</p>
           </div>
         </div>
         <button className={css.button} onClick={handleClick}>
