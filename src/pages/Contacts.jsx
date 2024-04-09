@@ -19,13 +19,19 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      {error && <ErrorMessage />}
-      {loading && <Loader />}
-      <ContactList />
+    <div className={css.bigContainer}>
+      <div className={css.container}>
+        <div className={css.miniContainer}>
+          <h1>Phonebook</h1>
+          <ContactForm />
+          <SearchBox />
+          {error && <ErrorMessage />}
+          {loading && <Loader />}
+        </div>
+        <div>
+          <ContactList />
+        </div>
+      </div>
     </div>
   );
 }

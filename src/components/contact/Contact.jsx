@@ -12,7 +12,7 @@ export default function Contact({ contacts: { id, name, number } }) {
   const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const handleDelete = () => {
     return dispatch(deleteContact(id))
       .unwrap()
       .then(() => {
@@ -47,7 +47,7 @@ export default function Contact({ contacts: { id, name, number } }) {
             <FaPhoneAlt />
           </div>
         </div>
-        <button className={css.button} onClick={handleClick}>
+        <button className={css.button} onClick={() => handleDelete()}>
           <AiFillDelete className={css.icon} />
         </button>
       </div>
