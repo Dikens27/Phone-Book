@@ -1,4 +1,4 @@
-import AppBar from '../appBar/appBar';
+import AppBar from '../appBar/AppBar';
 
 export default function Layout({ children }) {
   return (
