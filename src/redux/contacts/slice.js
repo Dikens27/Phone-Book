@@ -5,7 +5,7 @@ import {
   deleteContact,
   updateContact,
 } from './operations';
-import { userLogOut } from '../auth/operations';
+import { logOut } from '../auth/operations';
 
 const slice = createSlice({
   name: 'contacts',
@@ -60,7 +60,7 @@ const slice = createSlice({
       .addCase(updateContact.rejected, state => {
         state.error = true;
       })
-      .addCase(userLogOut.fulfilled, state => {
+      .addCase(logOut.fulfilled, state => {
         state.items = [];
         state.loading = false;
       }),

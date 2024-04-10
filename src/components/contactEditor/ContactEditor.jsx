@@ -35,25 +35,29 @@ export default function ContactEditor({
 
   return (
     <form onSubmit={handleSubmit} className={css.form}>
-      <div>
-        <input
-          className={css.input}
-          type="text"
-          name="name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-        <input
-          className={css.input}
-          type="text"
-          name="number"
-          value={number}
-          onChange={e => setNumber(e.target.value)}
-        />
+      <div className={css.container}>
+        <div className={css.miniContainer}>
+          <input
+            className={css.input}
+            type="text"
+            name="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+
+          <input
+            className={css.input}
+            type="text"
+            name="number"
+            value={number}
+            onChange={e => setNumber(e.target.value)}
+          />
+        </div>
+
+        <button className={css.button} type="submit">
+          <FcCheckmark className={css.icon} />
+        </button>
       </div>
-      <button className={css.button} type="submit">
-        <FcCheckmark />
-      </button>
     </form>
   );
 }

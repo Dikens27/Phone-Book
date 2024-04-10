@@ -28,7 +28,10 @@ export default function Contact({ contacts: { id, name, number } }) {
       <div className={css.container}>
         <div className={css.miniContainer}>
           <div className={css.iconText}>
-            <FaUser />
+            <div className={css.icons}>
+              <FaUser />
+              <FaPhoneAlt />
+            </div>
             {isEditing ? (
               <ContactEditor
                 initialValueName={name}
@@ -43,9 +46,7 @@ export default function Contact({ contacts: { id, name, number } }) {
               </div>
             )}
           </div>
-          <div className={css.iconText}>
-            <FaPhoneAlt />
-          </div>
+          <div className={css.iconText}></div>
         </div>
         <button className={css.button} onClick={() => handleDelete()}>
           <AiFillDelete className={css.icon} />

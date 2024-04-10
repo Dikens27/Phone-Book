@@ -36,3 +36,9 @@
   width: 20px;
   height: 20px;
 }
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
