@@ -18,7 +18,7 @@
 }
 
 .active {
-  color: red;
+  color: #2a4e98;
   background-color: var(--color-accent);
 
   transform: scale(1);

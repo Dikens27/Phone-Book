@@ -22,7 +22,7 @@ export default function Contacts() {
     <div className={css.bigContainer}>
       <div className={css.container}>
         <div className={css.miniContainer}>
-          <h1>Phonebook</h1>
+          <h1 className={css.title}>Phonebook</h1>
           <ContactForm />
           <SearchBox />
           {error && <ErrorMessage />}

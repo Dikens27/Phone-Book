@@ -11,14 +11,19 @@
   gap: 100px;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  border: 2px solid #000;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
   padding: 40px;
-  width: 1100px;
+  min-width: 1350px;
+  max-width: 1350px;
 }
 
 .bigContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  color: #eaeaea;
 }
