@@ -13,6 +13,16 @@ body {
   padding: 0;
   margin: 0;
   background: #304040 100%;
+  /* background-image: url('../public/phone4.jpg');
+  background-clip: border-box, border-box;
+  background-attachment: fixed, fixed;
+  background-color: rgb(47, 47, 47);
+  background-repeat: no-repeat;
+  background-origin: padding-box, padding-box;
+  background-position-x: 50%, 50%;
+  background-position-y: 0%, 0%;
+  background-size: cover;
+  box-sizing: border-box; */
 }
 
 ul {
