@@ -1,31 +1,53 @@
+/*___________________________Desktop______________________ */
 .mainBlock {
-  min-width: 1400px;
+  min-width: 375px;
+  max-width: 375px;
   padding: 15px;
   border-left: 1px solid #eaeaea;
   border-right: 1px solid #eaeaea;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
   padding: 0 16px;
   font-size: 24px;
   text-align: center;
-  text-indent: 40px;
+  /* text-indent: 40px; */
   color: #eaeaea;
 }
 
-.textLast {
-  padding: 0 16px;
-  font-size: 24px;
-  margin-bottom: 16px;
-  text-align: center;
-  color: #eaeaea;
-}
+/* .blochok {
+  width: 300px;
+} */
 
-.link {
-  display: inline-block;
-  color: #2a4e98;
-}
+@media (min-width: 1440px) {
+  .mainBlock {
+    min-width: 1400px;
+  }
 
-.link:hover {
-  transform: scale(1.1);
+  .text {
+    padding: 0 16px;
+    font-size: 24px;
+    text-align: center;
+    text-indent: 40px;
+    color: #eaeaea;
+  }
+
+  .textLast {
+    padding: 0 16px;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #eaeaea;
+  }
+
+  .link {
+    display: inline-block;
+    color: #2a4e98;
+  }
+
+  .link:hover {
+    transform: scale(1.1);
+  }
 }
